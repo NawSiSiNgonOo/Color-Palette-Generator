@@ -7,7 +7,7 @@ The **Color Palette Generator** is a web-based application that allows users to 
 ## Features
 - **Upload Image**: Users can upload an image to generate a color palette.
 - **K-means Clustering**: The app clusters similar colors and displays the most prominent ones.
-- **Color Search**: Users can search for colors within the palette by name or hex code.
+- **Color Search**: Users can search for colors within the palette by name.
 - **Copy Color Codes**: Easily copy hex codes of the generated colors for use in other applications.
 
 ## Technology Stack
