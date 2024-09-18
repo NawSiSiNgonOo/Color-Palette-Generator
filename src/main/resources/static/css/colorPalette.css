@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#app {
+    text-align: center;
+}
+
+#imageInput {
+    margin-bottom: 20px;
+}
+
+#imageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#originalImage {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+#paletteContainer {
+    display: none;
+    margin-top: 20px;
+}
+
+#colorPalette {
+    display: flex;
+    gap: 10px;
+}
+
+#colorPalette div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

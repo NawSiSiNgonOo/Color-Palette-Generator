@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="/css/upload.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="/" class="nav-link" th:href="@{/home}">Home</a>
+    <div class="nav-link"> > </div>
+    <a href="/upload" class="nav-link">Image Upload</a>
+</nav>
+<div class="main-container">
+
+    <div class="container">
+        <form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file" accept="image/*" hidden>
+            <div class="img-area" data-img="">
+                <i class='bx bxs-cloud-upload icon'></i>
+                <h3>Upload Image</h3>
+                <p>Image size must be less than <span>2MB</span></p>
+            </div>
+            <button type="button" class="select-image" onclick="selectImage()">Select Image</button>
+
+            <!-- New button for form submission -->
+            <button type="submit" class="submit-button">Upload Image</button>
+        </form>
+    </div>
+
+    <div class="result-container">
+    <!-- Display uploaded image -->
+        <div class="uploaded-container" th:if="${uploadedImagePath}">
+            <h3>Uploaded Image</h3>
+            <img th:src="@{${uploadedImagePath}}" alt="Uploaded Image">
+        </div>
+
+        <div class="colors-container" th:if="${clusteredColors}">
+            <h3>Clustered Colors</h3>
+                <div th:each="color : ${clusteredColors}" class="color-box">
+                    <div th:style="'background-color: rgb(' + ${color.getRed()} + ',' + ${color.getGreen()} + ',' + ${color.getBlue()} + '); width: 50px; height: 50px; display: inline-block;'" onclick="copyColorCode(this)"></div>
+<!--                    <span th:text="'Color: RGB(' + ${color.getRed()} + ',' + ${color.getGreen()} + ',' + ${color.getBlue()} + ')'"></span>-->
+
+                </div>
+                </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/upload.js"></script>
+
+
+
+</body>
+</html>

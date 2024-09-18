@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Color Palette Generator</title>
+</head>
+<body>
+<nav>
+    <div class="nav__logo"><a href="#">Color Canvas</a></div>
+    <ul class="nav__links">
+        <li class="link">Home</li>
+        <li class="link"><a href="#trend">Trends</a></li>
+        <li class="link"><a href="#contact">Contacts</a></li>
+    </ul>
+</nav>
+<header>
+    <div class="section__container">
+        <div class="header__content">
+            <h1>Color Palette Generator</h1>
+            <p>
+                Welcome to Color Palette Generator, where the beauty of colors meets the magic of creation. Our platform is a sophisticated Color Palette Generator designed to inspire and assist artists, designers, and enthusiasts in their creative journeys.
+            </p>
+            <button><a href="/" th:href="@{/registration}">Join the palette</a></button>
+        </div>
+    </div>
+</header>
+
+<section class="journey__container" id="trend">
+    <div class="section__container">
+        <h2 class="section__title">Popular Trends</h2>
+        <p class="section__subtitle">Discover current color trends in different industries</p>
+        <div class="journey__grid">
+            <div class="country__card">
+                <img src="/images/1.png" alt="country" />
+                <div class="country__name">
+                    <i class="ri-heart-line"></i>
+                    <span>Color Canvas</span>
+                </div>
+            </div>
+            <div class="country__card">
+                <img src="/images/2.png" alt="country" />
+                <div class="country__name">
+                    <i class="ri-heart-line"></i>
+                    <span>Color Canvas</span>
+                </div>
+            </div>
+            <div class="country__card">
+                <img src="/images/3.png" alt="country" />
+                <div class="country__name">
+                    <i class="ri-heart-line"></i>
+                    <span>Color Canvas</span>
+                </div>
+            </div>
+            <div class="country__card">
+                <img src="/images/4.png" alt="country" />
+                <div class="country__name">
+                    <i class="ri-heart-line"></i>
+                    <span>Color Canvas</span>
+                </div>
+            </div>
+            <div class="country__card">
+                <img src="/images/5.png" alt="country" />
+                <div class="country__name">
+                    <i class="ri-heart-line"></i>
+                    <span>Color Canvas</span>
+                </div>
+            </div>
+            <div class="country__card">
+                <img src="/images/6.png" alt="country" />
+                <div class="country__name">
+                    <i class="ri-heart-line"></i>
+                    <span>Color Canvas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="display__container">
+    <div class="section__container">
+        <h2 class="section__title">Why Choose Us</h2>
+        <p class="section__subtitle">
+            For an immersive and empowering color palette generation experience
+        </p>
+        <div class="display__grid">
+            <div class="display__card grid-1">
+                <img src="/images/7.jpg" alt="grid" />
+            </div>
+            <div class="display__card">
+                <i class="ri-earth-line"></i>
+                <h4>Continuous Innovation</h4>
+                <p>Our commitment to innovation means regular updates and new features</p>
+            </div>
+            <div class="display__card">
+                <img src="/images/8.jpg" alt="grid" />
+            </div>
+            <div class="display__card">
+                <img src="/images/9.jpg" alt="grid" />
+            </div>
+            <div class="display__card">
+                <i class="ri-pages-line"></i>
+                <h4>User-Friendly Interface</h4>
+                <p>Experience a seamless and intuitive interface designed for users of all levels</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="section__container" id="contact">
+        <h4>Color Canvas</h4>
+        <div class="social__icons">
+            <span><i class="ri-facebook-fill"></i></span>
+            <span><i class="ri-twitter-fill"></i></span>
+            <span><i class="ri-instagram-line"></i></span>
+            <span><i class="ri-linkedin-fill"></i></span>
+        </div>
+        <p>
+            Join our community and color the world together
+        </p>
+    </div>
+</footer>
+</body>
+</html>

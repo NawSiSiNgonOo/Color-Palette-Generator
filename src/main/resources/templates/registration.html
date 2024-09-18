@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
+
+</head>
+<body>
+<p th:if="${param.success}">
+    You are successfully registered.
+
+</p>
+<main>
+
+    <header>
+        <h4>Register</h4>
+    </header>
+    <form th:action="@{/registration}" method="post" th:object="${user}">
+        <div class="form_wrapper">
+            <input id="firstName" type="text" th:field="*{firstName}" required>
+            <label for="firstName">First Name</label>
+            <i class="material-icons">person</i>
+        </div>
+        <div class="form_wrapper">
+            <input id="lastName" type="text" th:field="*{lastName}" required>
+            <label for="lastName">Last Name</label>
+            <i class="material-icons">person</i>
+        </div>
+        <div class="form_wrapper">
+            <input id="email" type="email" th:field="*{email}" required>
+            <label for="email">Email</label>
+            <i class="material-icons">email</i>
+        </div>
+
+        <div class="form_wrapper">
+            <input id="password" type="password" th:field="*{password}" required>
+            <label for="password">Password</label>
+            <i class="material-icons">lock</i>
+        </div>
+        <button type="submit">Register</button>
+        <div class="new_account">
+            Already registered? <a href="/" th:href="@{/login}">Login here</a>
+        </div>
+    </form>
+</main>
+
+</body>
+</html>

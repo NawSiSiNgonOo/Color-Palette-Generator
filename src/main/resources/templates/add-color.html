@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Form to add a new color -->
+<h2>Add Color</h2>
+<form th:action="@{/addColor}" method="post">
+    <label for="name">Color Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="hexCode">Hex Code:</label>
+    <input type="text" id="hexCode" name="hexCode" pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$" required>
+
+    <button type="submit">Add Color</button>
+</form>
+
+<div th:if="${duplicateColorMessage}" th:text="${duplicateColorMessage}" style="color: red;"></div>
+
+
+</body>
+</html>

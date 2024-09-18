@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Palette Generator</title>
+    <link rel="stylesheet" href="/css/refresh.css"> <!-- Add a link to your CSS file -->
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <a href="/" class="nav-link" th:href="@{/home}">Home</a>
+    <div class="nav-link"> > </div>
+    <a href="/palette" class="nav-link">Random Colors</a>
+</nav>
+
+<div class="content-container">
+    <h1>Palette Generator</h1>
+
+    <!-- Color Palette -->
+    <div id='colorPalette' th:fragment="colorPalette" class="color-palette">
+        <div th:each="color : ${colors}" th:style="'background-color: rgb(' + ${color.red} + ',' + ${color.green} + ',' + ${color.blue} + ')'" class="color-box1">
+<!--            <p th:text="'RGB: ' + ${color.red} + ', ' + ${color.green} + ', ' + ${color.blue} "></p>-->
+<!--            <p th:text="'Hex: ' + ${color.toHexString()} "></p>-->
+        </div>
+    </div>
+
+    <!-- Refresh Button -->
+    <button id="refreshButton" onclick="refreshPalette()">Refresh Palette</button>
+</div>
+
+<script th:inline="javascript" src="/js/refreshPalette.js"></script>
+
+</body>
+</html>

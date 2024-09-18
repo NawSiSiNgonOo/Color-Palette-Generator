@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="/css/home.css">
+
+    <title>Responsive navbar with search and login - Bedimcode</title>
+</head>
+<body>
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo">Color Canvas</a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Home</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="/" class="nav__link" th:href="@{/upload}">Image Upload</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="/" class="nav__link" th:href="@{/palette}">Random Colors</a>
+                </li>
+
+            </ul>
+
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__actions">
+            <!-- Search button -->
+            <i class="ri-search-line nav__search" id="search-btn"></i>
+
+            <a href="/" class="nav__link" th:href="@{/}"><i class="ri-logout-box-r-fill nav__logout" id="logout-btn"></i></a>
+
+            <!-- Login button -->
+<!--            <i class="ri-user-line nav__login" id="login-btn"></i>-->
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--==================== SEARCH ====================-->
+<div class="search" id="search">
+    <form th:action="@{/search1}" class="search__form" method="get">
+        <button class="ri-search-line search__icon" type="submit"></button>
+        <input type="search" placeholder="What are you looking for?" class="search__input" id="query" name="query">
+    </form>
+
+    <div th:replace="~{fragments/colors :: colorResults}"></div>
+
+    <i class="ri-close-line search__close" id="search-close"></i>
+</div>
+
+<!--==================== LOGIN ====================-->
+<!--<div class="login" id="login">-->
+<!--    <form action="" class="login__form">-->
+<!--        <h2 class="login__title">Log In</h2>-->
+
+<!--        <div class="login__group">-->
+<!--            <div>-->
+<!--                <label for="email" class="login__label">Email</label>-->
+<!--                <input type="email" placeholder="Write your email" id="email" class="login__input">-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                <label for="password" class="login__label">Password</label>-->
+<!--                <input type="password" placeholder="Enter your password" id="password" class="login__input">-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div>-->
+<!--            <p class="login__signup">-->
+<!--                You do not have an account? <a href="#">Sign up</a>-->
+<!--            </p>-->
+
+<!--            <a href="#" class="login__forgot">-->
+<!--                You forgot your password-->
+<!--            </a>-->
+
+<!--            <button type="submit" class="login__button">Log In</button>-->
+<!--        </div>-->
+<!--    </form>-->
+
+<!--    <i class="ri-close-line login__close" id="login-close"></i>-->
+<!--</div>-->
+
+<!--==================== MAIN ====================-->
+<main class="main">
+<h1>Popular Color Shapes</h1>
+<p class="description">Generate beautiful color palettes with just a click. Explore a world of vibrant colors to inspire your designs.</p>
+
+<div class="color-palette">
+    <div class="color-box1" style="background-color: #cdb4db;"></div>
+    <div class="color-box1" style="background-color: #ffc8dd;"></div>
+    <div class="color-box1" style="background-color: #ffafcc;"></div>
+    <div class="color-box1" style="background-color: #bde0fe;"></div>
+    <div class="color-box1" style="background-color: #a2d2ff;"></div>
+    <div class="color-box1" style="background-color: #8ecae6;"></div>
+    <div class="color-box1" style="background-color: #219ebc;"></div>
+    <div class="color-box1" style="background-color: #ffe5ec;"></div>
+    <div class="color-box1" style="background-color: #ecf39e;"></div>
+    <div class="color-box1" style="background-color: #90a955;"></div>
+    <div class="color-box1" style="background-color: #4f772d;"></div>
+    <div class="color-box1" style="background-color: #31572c;"></div>
+    <div class="color-box1" style="background-color: #e0aaff;"></div>
+    <div class="color-box1" style="background-color: #c77dff;"></div>
+    <div class="color-box1" style="background-color: #9d4edd;"></div>
+    <div class="color-box1" style="background-color: #7b2cbf;"></div>
+    <div class="color-box1" style="background-color: #5a189a;"></div>
+    <div class="color-box1" style="background-color: #ffdab9;"></div>
+    <div class="color-box1" style="background-color: #fbc4ab;"></div>
+    <div class="color-box1" style="background-color: #f08080;"></div>
+    <div class="color-box1" style="background-color: #f4978e;"></div>
+    <div class="color-box1" style="background-color: #a8dadc;"></div>
+    <div class="color-box1" style="background-color: #ffddd2;"></div>
+    <div class="color-box1" style="background-color: #e29578;"></div>
+    <div class="color-box1" style="background-color: #d3f8e2;"></div>
+    <div class="color-box1" style="background-color: #e4c1f9;"></div>
+    <div class="color-box1" style="background-color: #f694c1;"></div>
+    <div class="color-box1" style="background-color: #ede7b1;"></div>
+    <div class="color-box1" style="background-color: #a9def9;"></div>
+    <div class="color-box1" style="background-color: #84dcc6;"></div>
+    <div class="color-box1" style="background-color: #a5ffd6;"></div>
+    <div class="color-box1" style="background-color: #90caf9;"></div>
+    <div class="color-box1" style="background-color: #64b5f6;"></div>
+    <div class="color-box1" style="background-color: #42a5f5;"></div>
+    <div class="color-box1" style="background-color: #2196f3;"></div>
+    <div class="color-box1" style="background-color: #1e88e5;"></div>
+    <div class="color-box1" style="background-color: #f9dc5c;"></div>
+    <div class="color-box1" style="background-color: #fae588;"></div>
+    <div class="color-box1" style="background-color: #fcefb4;"></div>
+    <div class="color-box1" style="background-color: #f9dc5c;"></div>
+    <div class="color-box1" style="background-color: #e5f993;"></div>
+    <div class="color-box1" style="background-color: #69a197;"></div>
+</div>
+</main>
+<footer>
+    <div class="section__container" id="contact">
+        <h4>Color Canvas</h4>
+        <div class="social__icons">
+            <span><i class="ri-facebook-fill"></i></span>
+            <span><i class="ri-twitter-fill"></i></span>
+            <span><i class="ri-instagram-line"></i></span>
+            <span><i class="ri-linkedin-fill"></i></span>
+        </div>
+        <p>
+            Join our community and color the world together
+        </p>
+    </div>
+</footer>
+
+<!--=============== MAIN JS ===============-->
+<script src="/js/home.js"></script>
+</body>
+</html>
