@@ -18,10 +18,10 @@ The **Color Palette Generator** is a web-based application that allows users to 
 
 ## Screenshots
 ### 1. Home Page
-![Home Page](screenshots/homepage.png)
+![Home Page](https://github.com/NawSiSiNgonOo/Color-Palette-Generator/blob/main/Home%20Page.jpg)
 
 ### 2. Color Palette Generated
-![Palette Generated](screenshots/palette-generated.png)
+![Palette Generated](https://github.com/NawSiSiNgonOo/Color-Palette-Generator/blob/main/Clustered%20colors.jpg)
 
 ## Getting Started
 
